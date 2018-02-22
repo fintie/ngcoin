@@ -40,8 +40,8 @@ contract NGToken is StandardToken {
         uint8 _decimalUnits,
         string _tokenSymbol
         ) {
-            balances[msg.sender] = 50000000000;             // Give the creator all initial tokens
-            totalSupply = 150000000000;                     // Update total supply
+            balances[msg.sender] = 210000000000;             // Give the creator all initial tokens
+            totalSupply = 210000000000;                     // Update total supply
             name = "NG COIN";                               // Set the name for display purposes
             decimals = 0;                                   // Amount of decimals for display purposes
             symbol = "NGC";                                 // Set the symbol for display purposes
