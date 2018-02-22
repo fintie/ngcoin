@@ -1,6 +1,6 @@
 /*
 This implements ONLY the standard functions and NOTHING else.
-For a token like you would want to deploy in something like Mist, see HumanStandardToken.sol.
+For a token like you would want to deploy in something like Mist, see NGToken.sol.
 
 If you deploy this, you won't have anything useful.
 

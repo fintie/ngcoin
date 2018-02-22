@@ -1,7 +1,7 @@
 module.exports = {
   "build": "webpack",
   "deploy": [
-    "HumanStandardToken"
+    "NGToken"
   ],
   "rpc": {
     // Default RPC configuration.

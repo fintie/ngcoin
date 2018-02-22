@@ -14,7 +14,7 @@ pragma solidity ^0.4.4;
 
 import "./StandardToken.sol";
 
-contract HumanStandardToken is StandardToken {
+contract NGToken is StandardToken {
 
     function () {
         //if ether is sent to this address, send it back.
@@ -34,7 +34,7 @@ contract HumanStandardToken is StandardToken {
     string public symbol;                 //An identifier: eg SBX
     string public version = 'H0.1';       //human 0.1 standard. Just an arbitrary versioning scheme.
 
-    function HumanStandardToken(
+    function NGToken(
         uint256 _initialAmount,
         string _tokenName,
         uint8 _decimalUnits,

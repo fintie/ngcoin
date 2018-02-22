@@ -17,8 +17,8 @@ var TxForm = React.createClass({
     };
   },
   componentDidMount: function() {
-    /*console.log(HumanStandardToken.prototype);
-    console.log(HumanStandardToken.prototype.binary);*/
+    /*console.log(NGToken.prototype);
+    console.log(NGToken.prototype.binary);*/
   },
   componentDidUpdate: function() {
     //first props are passed only after it mounted.
@@ -69,7 +69,7 @@ var TxForm = React.createClass({
     if(typeof this.props.web3_token == 'undefined') {
       //token creation execution
       console.log('creating');
-      var ST = web3.eth.contract(HumanStandardToken.abi);
+      var ST = web3.eth.contract(NGToken.abi);
       var tx_hash = null;
       var that = this;
 
@@ -80,9 +80,9 @@ var TxForm = React.createClass({
         //args[1] = string _tokenName,
         //args[2] = uint8 _decimalUnits,
         //args[3] = string _tokenSymbol
-        //var creation_data = ST.new.getData(args[0], args[1], args[2], args[3], {from: addr, data: "0x" + HumanStandardToken.prototype.binary, gasPrice: 50000000000, gas: 3100000});
+        //var creation_data = ST.new.getData(args[0], args[1], args[2], args[3], {from: addr, data: "0x" + NGToken.prototype.binary, gasPrice: 50000000000, gas: 3100000});
 
-        ST.new(args[0], args[1], args[2], args[3], {from: addr, data: HumanStandardToken.prototype.binary, gasPrice: 20000000000, gas: 1000000}, function(err, result) {
+        ST.new(args[0], args[1], args[2], args[3], {from: addr, data: NGToken.prototype.binary, gasPrice: 20000000000, gas: 1000000}, function(err, result) {
           //NOTE: This callback fires twice. Once tx hash comes in. Then when mined.
           if(err) {
             console.log(err);
