@@ -34,12 +34,7 @@ contract NGToken is StandardToken {
     string public symbol;                 //An identifier: eg SBX
     string public version = 'H0.1';       //human 0.1 standard. Just an arbitrary versioning scheme.
 
-    function NGToken(
-        uint256 _initialAmount,
-        string _tokenName,
-        uint8 _decimalUnits,
-        string _tokenSymbol
-        ) {
+    function NGToken() {
             balances[msg.sender] = 210000000000;             // Give the creator all initial tokens
             totalSupply = 210000000000;                     // Update total supply
             name = "NG COIN";                               // Set the name for display purposes
