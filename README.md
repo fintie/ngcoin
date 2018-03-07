@@ -107,6 +107,19 @@ GAS 伴随着每个新区块的生成而产生。GAS 初期总量为零，伴随
 
 钱包框架
 
-区块链应用框架
+User Registraion & Login
+Check Balance
+Transfer Balance
+Wallet Address Management
+
+区块链应用
+
+Checkin Reward
+Refferel Reward
+Purchase Entrepreneur Service With NG COIN
+Group sending NG COIN
+DAPP Application
 
 安全支付框架
+
+
