@@ -18,7 +18,7 @@ class TransferHandler{
             var destAddress = transferInfo.ToWallet;
             var transferAmount = transferInfo.Amount;
             var contractAddress = transferInfo.ContractAddress;
-            var privateKey = new Buffer("8d923c0e37915df16d2b8ea8dcff767ae0084141d1e1d76b220f55cb0cc4c536", 'hex');
+            var privateKey = new Buffer("[private key]", 'hex');
             
             var chainId = 3;
 
