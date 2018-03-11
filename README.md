@@ -88,14 +88,14 @@ IP 交易市场
 
 NG COIN 的分发：
 社区代币分为三部分
-第一部分 500万份NG COIN用于按轮次和比例分发给 NextGenius 开发经费众筹的支持者。
-第二部分 500万份NG COIN分发给提交项目计划书的创业公司。
-第三部分 500 万份由 NextGenius 理事会管理，用于支持 NextGenius 社区的长期开发、运维和生态发展。该部分处于锁定期，在 2019 年 2 月 28 日 NG 网络运行达 1 年时方可解锁被使用。这部分 NG COIN 不会进入交易所交易，仅用于长期支持 NG 项目，计划按如下比例分配使用：
-🔹 100 万份（总量 10%）用于激励 NG 开发者和 NG 理事会成员
-🔹 100 万份（总量 10%）用于激励 NG 周边生态开发者
-🔹 150 万份（总量 15%）用于交叉投资其他区块链项目，所获得代币归属于 NG 理事会，并仅用于 NG平台上的 项目
-🔹 150 万份（总量 15%）机动使用
-🔹 每年使用的 NG COIN 原则上不得超过 150 万份
+第一部分 5/21 NG COIN用于按轮次和比例分发给 NextGenius 开发经费众筹的支持者。
+第二部分 5/21 NG COIN分发给提交项目计划书的创业公司。
+第三部分 5/21 由 NextGenius 理事会管理，用于支持 NextGenius 社区的长期开发、运维和生态发展。该部分处于锁定期，在 2019 年 2 月 28 日 NG 网络运行达 1 年时方可解锁被使用。这部分 NG COIN 不会进入交易所交易，仅用于长期支持 NG 项目，计划按如下比例分配使用：
+🔹 1/21 用于激励 NG 开发者和 NG 理事会成员
+🔹 1/21 用于激励 NG 周边生态开发者
+🔹 1.5/21 用于交叉投资其他区块链项目，所获得代币归属于 NG 理事会，并仅用于 NG平台上的 项目
+🔹 1.5/21 机动使用
+🔹 每年使用的 NG COIN 原则上不得超过 1.5/21
  
  
  
@@ -105,7 +105,7 @@ GAS 伴随着每个新区块的生成而产生。GAS 初期总量为零，伴随
 按照这样的发行曲线，第 1 年会有 16% 的 GAS 被创造，前 4 年会有 52% 的 GAS 被创造，前 12 年 80% 的 GAS 被创造。这些的 GAS 都会按照 NG COIN 的持有比例，记录在对应的地址上。NG COIN 持有人可以在任意时间进行发起一笔认领交易，将这些 GAS 认领到 NG COIN 的地址上。
 
 
-钱包框架
+钱包框架 (Yun)
 
 Check Balance
 
@@ -113,7 +113,7 @@ Transfer Balance
 
 Wallet Address Management
 
-区块链应用
+后台管理
 
 User Registraion & Login (Nick)
 
@@ -121,11 +121,17 @@ Group sending NG COIN (Rick + Nick)
 
 Refferel Reward (Rick + Shane)
 
-Purchase Entrepreneur Service With NG COIN (Shane + Nick)
+Checkin Reward (Rick + Robin)
 
-Checkin Reward
+DAPP区块链应用
 
-DAPP Application
+Queue In System (Alex)
+
+Entrepreneur Service With NG COIN (Nick + Alex)
+
+区块链教育培训
+
+Regular Workshop (James + Lecky)
 
 安全支付框架
 
