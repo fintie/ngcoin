@@ -18,6 +18,6 @@ module.exports = {
   "rpc": {
     // Default RPC configuration.
     "host": "localhost",
-    "port": 8545
+    "port": 8080
   }
 }

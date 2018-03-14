@@ -1,6 +1,7 @@
 import React from "react";
 import {TXComponent} from "reflux-tx";
 import TxForm from "./txform.jsx";
+import NGToken from "./../../build/contracts/NGToken.json"
 
 /*
 Token wallet page. How you interact with a standard token.
@@ -31,6 +32,8 @@ var TokenPage = React.createClass({
   },
   componentDidMount: function() {
     this.setState({contract_address: this.props.params.contract_address});
+
+    console.log(NGToken.abi);
 
     //it is going to want to try and use NGToken ABI, hoping that is this ERC20 version of the token.
     var web3_token = web3.eth.contract(NGToken.abi).at(this.props.params.contract_address); //for reflux-tx
