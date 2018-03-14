@@ -304,6 +304,7 @@ module.exports = function(callback) {
 	var ci = web3.eth.contract(abi)
 		// change to contract address
 	var contact_instance = ci.at('0x345ca3e014aaf5dca488057592ee47305d9b3e10'); 
+
 	// change to contract owner address
 	var nick = '0x627306090abab3a6e1400e9345bc60c78a8bef57';
 
@@ -315,7 +316,7 @@ module.exports = function(callback) {
 		}
 		/*
 		 // todo:  did we need set gas here ?
-		   contact_instance.transfer(addr, 100, {from: nick}, function(e,r){
+		   contact_instance.transfer(addr, 100, {from: nick, gas:21000}, function(e,r){
 		   if(e){
 				// if nothing means no error.
 				console.log(e);
@@ -323,12 +324,12 @@ module.exports = function(callback) {
 		});
 		*/
 		contact_instance.balanceOf(addr, function(e,data){
-			console.log(data.toNumber())
+			console.log(data)
 		});
 	}
 
 	contact_instance.balanceOf(nick, function(e,data){
-		console.log(data.toNumber())
+		console.log(data)
 	});
 
 }

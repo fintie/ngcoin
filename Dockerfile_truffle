@@ -1,0 +1,14 @@
+FROM node:9.8.0-alpine
+
+RUN apk add -t .gyp --no-cache git python g++ make \
+    && npm install -g truffle \
+    && apk del .gyp
+
+#RUN mkdir -p /truffle_dev_node_dir
+#WORKDIR /truffle_dev_node_dir
+
+
+ENV INSTALL_PATH /ngcoin_app
+RUN mkdir -p $INSTALL_PATH
+WORKDIR $INSTALL_PATH
+COPY . $INSTALL_PATH

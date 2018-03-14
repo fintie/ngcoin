@@ -1,0 +1,29 @@
+version: '3'
+services:
+    testrpc:
+        container_name: ngc_testrpc
+        image: ngc_testrpc
+        build:
+            context: containers/testrpc
+        networks:
+            - ethereum-dev
+        entrypoint: ganache-cli
+        command: '-h 0.0.0.0 -p 8545'
+
+    truffle:
+        container_name: ngc_truffle
+        image: ngc_truffle
+        build:
+            context: .
+            dockerfile: Dockerfile_truffle
+        stdin_open: true
+        tty: true
+        networks:
+            - ethereum-dev
+        links:
+            - testrpc
+
+
+networks:
+  ethereum-dev:
+    driver: bridge
