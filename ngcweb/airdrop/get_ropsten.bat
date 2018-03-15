@@ -1,0 +1,1 @@
+"C:\Users\MyPC\AppData\Roaming\Ethereum Wallet\binaries\Geth\unpacked\geth.exe" --testnet --rpc --rpcapi "eth,net,web3,personal" --rpccorsdomain '*' --rpcaddr 127.0.0.1 --rpcport 8545

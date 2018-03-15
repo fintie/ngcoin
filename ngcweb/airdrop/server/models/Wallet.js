@@ -7,6 +7,8 @@ class TransferInfo{
         this.Amount = "";
         this.Gas = "";
         this.Note = "";
+        this.PrivateKey = "";
+        this.Password = "";
     }
 }
 

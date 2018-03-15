@@ -24,6 +24,8 @@ function GetTransferInfo(req){
     transfer.Amount = req.body.Amount;
     transfer.Gas = req.body.Gas;
     transfer.Note = req.body.Note;
+    transfer.PrivateKey = req.body.PrivateKey;
+    transfer.Password = req.body.Password;
     return transfer;
 }
 

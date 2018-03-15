@@ -18,51 +18,74 @@ class TransferHandler{
             var destAddress = transferInfo.ToWallet;
             var transferAmount = transferInfo.Amount;
             var contractAddress = transferInfo.ContractAddress;
-            var privateKey = new Buffer("[private key]", 'hex');
+            var prvKey = transferInfo.PrivateKey;
+            var pwd = transferInfo.Password;
+            var privateKey = new Buffer(prvKey, 'hex');
             
             var chainId = 3;
 
             // Determine the nonce
             web3.eth.defaultAccount = myAddress;
-            //web3.personal
+            web3.personal.unlockAccount(myAddress, pwd, 600);
             var count = web3.eth.getTransactionCount(myAddress);
             console.log(`num transactions so far: ${count}`);
 
             var contractAbi = web3.eth.contract(abiArray);
             var contract = contractAbi.at(contractAddress);
+
+            
+
             //, { from: myAddress});
 
-            //var balance = contract.methods.balanceOf(myAddress).call();
+            var balance = contract.balanceOf(myAddress);
 
-            //console.log(`Balance before send: ${financialMfil(balance)} MFIL\n------------------------`);
+            console.log(`Balance before send: ${balance} MFIL\n------------------------`);
 
-            var gasPriceGwei = 3;
-            var gasLimit = 3000000;
-            var data = contract.transfer(destAddress, transferAmount).encodeABI();
+            // var gasPriceGwei = 3;
+            // var gasLimit = 3000000;
+
+            var datasent = contract.transferFrom(myAddress, destAddress,  transferAmount, 
+                            {gas: 2000,
+                            "chainId": chainId}, 
+                            function(err, hash) {
+                if (!err)
+                    console.log(hash);
+                else
+                    console.log(err);
+            });
+
+            // var data = contract.transfer.getData(destAddress, transferAmount);
             
-            var rawTransaction = {
-                "from": myAddress,
-                "nonce": "0x" + count.toString(16),
-                "gasPrice": web3.toHex(gasPriceGwei * 1e9),
-                "gasLimit": web3.toHex(gasLimit),
-                "to": destAddress, //contractAddress,
-                "value": "0x0",
-                "data": data,
-                "chainId": chainId
-            };
-            console.log(`Raw of Transaction: \n${JSON.stringify(rawTransaction, null, '\t')}\n------------------------`);
+            // var rawTransaction = {
+            //     "from": myAddress,
+            //     //"nonce": "0x" + count.toString(16),
+            //     "gas": "100",
+            //     "gasPrice":web3.gasPrice,
+            //     //"gasLimit": web3.toHex(gasLimit),
+            //     "data": data,
+            //     "to": destAddress,
+            //     "chainId": chainId
+            // };
+            // console.log(`Raw of Transaction: \n${JSON.stringify(rawTransaction, null, '\t')}\n------------------------`);
 
-            var tx = new Tx(rawTransaction);
-            tx.sign(privKey);
-            var serializedTx = tx.serialize();
-            // Comment out these four lines if you don't really want to send the TX right now
-            console.log(`Attempting to send signed tx:  ${serializedTx.toString('hex')}\n------------------------`);
-            var receipt = web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'));
+            // var tx = new Tx(rawTransaction);
+            // tx.sign(privateKey);
+            // var serializedTx = tx.serialize();
+            // // Comment out these four lines if you don't really want to send the TX right now
+            // console.log(`Attempting to send signed tx:  ${serializedTx.toString('hex')}\n------------------------`);
+
+            // web3.eth.sendRawTransaction('0x' + serializedTx.toString('hex'), function(err, hash) {
+            //     if (!err)
+            //         console.log(hash);
+            //     else
+            //         console.log(err);
+            // });
+
             // The receipt info of transaction, Uncomment for debug
-            console.log(`Receipt info: \n${JSON.stringify(receipt, null, '\t')}\n------------------------`);
+            //console.log(`Receipt info: \n${JSON.stringify(receipt, null, '\t')}\n------------------------`);
             // The balance may not be updated yet, but let's check
-            balance =  contract.methods.balanceOf(myAddress).call();
-            console.log(`Balance after send: ${financialMfil(balance)} MFIL`);
+            //balance =  contract.methods.balanceOf(myAddress).call();
+            //console.log(`Balance after send: ${financialMfil(balance)} MFIL`);
     }
 }
 
