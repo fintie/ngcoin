@@ -1,0 +1,21 @@
+FROM node:9.8.0-alpine
+
+RUN apk add -t .gyp --no-cache git python g++ make \
+    && npm install -g truffle \
+    && apk del .gyp
+
+
+ENV INSTALL_PATH /ngcoin_app
+RUN mkdir -p $INSTALL_PATH
+WORKDIR $INSTALL_PATH
+
+RUN mkdir -p $INSTALL_PATH/contracts
+COPY contracts $INSTALL_PATH/contracts
+
+RUN mkdir -p $INSTALL_PATH/migrations
+COPY migrations $INSTALL_PATH/migrations
+
+RUN mkdir -p $INSTALL_PATH/external_js
+COPY external_js $INSTALL_PATH/external_js
+COPY truffle.js $INSTALL_PATH
+COPY 3_truffle_migrate.sh $INSTALL_PATH
