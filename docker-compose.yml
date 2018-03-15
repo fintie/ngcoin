@@ -3,6 +3,8 @@ services:
     testrpc:
         container_name: ngc_testrpc
         image: ngc_testrpc
+        ports:
+            - "8545:8545"
         build:
             context: containers/testrpc
         networks:
