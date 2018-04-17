@@ -1,5 +1,5 @@
  
-NGCOIN项目：
+NG Coin：
 基于区块链技术的初创企业投资众筹平台
 
 ─
@@ -86,7 +86,6 @@ IP 交易市场
 算力市场
  
 
-
  
 分发机制 (to be confirmed)
 
@@ -109,7 +108,7 @@ GAS 伴随着每个新区块的生成而产生。GAS 初期总量为零，伴随
 按照这样的发行曲线，第 1 年会有 16% 的 GAS 被创造，前 4 年会有 52% 的 GAS 被创造，前 12 年 80% 的 GAS 被创造。这些的 GAS 都会按照 NG COIN 的持有比例，记录在对应的地址上。NG COIN 持有人可以在任意时间进行发起一笔认领交易，将这些 GAS 认领到 NG COIN 的地址上。
 
 
-钱包框架 (Yun)
+Wallet (Yun Tan)
 
 Check Balance
 
@@ -117,7 +116,12 @@ Transfer Balance
 
 Wallet Address Management
 
-后台管理
+DAPP Integration
+
+Wallet Secuirty
+
+
+Admin Management
 
 User Registraion & Login (Nick)
 
@@ -127,16 +131,13 @@ Refferel Reward (Rick + Shane)
 
 Checkin Reward (Rick + Robin)
 
-DAPP区块链应用
+
+DAPP Development
 
 Queue In System (Alex)
 
+Lottery (Hugo)
+
+CryptoPet
+
 Entrepreneur Service With NG COIN (Nick + Alex)
-
-区块链教育培训
-
-Regular Workshop (James + Lecky)
-
-安全支付框架
-
-
