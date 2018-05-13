@@ -1,0 +1,3 @@
+[submodule "ConsenSysMultiSigWalletAudit"]
+	path = ConsenSysMultiSigWalletAudit
+	url = "https://github.com/bokkypoobah/ConsenSysMultiSigWalletAudit#code-review"
